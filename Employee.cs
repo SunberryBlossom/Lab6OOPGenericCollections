@@ -16,5 +16,15 @@ namespace Lab6OOPGenericCollections
         public string Name { get; set; }
         public Gender Gender { get; set; }
         public decimal Salary { get; set; }
+
+
+        //--------CONSTRUCTOR-----------//
+        public Employee(string id, string name, Gender gender, decimal salary)
+        {
+            Id = id;
+            Name = name;
+            Gender = gender;
+            Salary = salary;
+        }
     }
 }
