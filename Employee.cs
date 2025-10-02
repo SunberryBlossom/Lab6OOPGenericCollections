@@ -11,9 +11,10 @@ namespace Lab6OOPGenericCollections
 
     internal class Employee
     {
+        //----------PROPERTIES------------//
         public string Id { get; set; }
         public string Name { get; set; }
-
         public Gender Gender { get; set; }
+        public decimal Salary { get; set; }
     }
 }
