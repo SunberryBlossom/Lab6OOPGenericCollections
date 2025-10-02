@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Lab6OOPGenericCollections
 {
     // Creating an enum for the gender variable, in order to only allow specific values I allow.
-    enum Gender { Male, Female, NonBinary}
+    enum Gender { Male, Female, Other}
 
     internal class Employee
     {
