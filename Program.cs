@@ -45,6 +45,13 @@
                 Console.WriteLine($"Items left in the stack: {employeeStack.Count}");
                 Console.WriteLine("--------------------------");
             }
+
+            // Push the objects back into the stack
+            employeeStack.Push(Mika);
+            employeeStack.Push(Elvira);
+            employeeStack.Push(Sam);
+            employeeStack.Push(Andreas);
+            employeeStack.Push(Hera);
         }
     }
 }
