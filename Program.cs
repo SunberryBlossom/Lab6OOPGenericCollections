@@ -6,16 +6,16 @@
         {
             //---------------------------------------------------------------------PART-ONE-----------------------------------------------------//
 
-            // Creating a Stack to contain Employee objects
-            Stack<Employee> employeeStack = new Stack<Employee>();
-
-
             // Creating five employees
             Employee Mika = new Employee("E001", "Mika Mikasdotter", Gender.Female, 25600);
             Employee Elvira = new Employee("E002", "Elvira Mariesdotter", Gender.Female, 38400);
             Employee Sam = new Employee("E003", "Sam Samssen", Gender.Other, 16700);
             Employee Andreas = new Employee("E004", "Andreas Andreasson", Gender.Male, 30000);
             Employee Hera = new Employee("E005", "Hera Hund", Gender.Female, 6050);
+
+
+            // Creating a Stack to contain Employee objects
+            Stack<Employee> employeeStack = new Stack<Employee>();
 
 
             // Pushing in five new employees with filled in property values
@@ -35,6 +35,7 @@
                 Console.WriteLine("--------------------------\n");
             }
 
+
             // Print out all employees through the Pop method
             // Since we are removing items from the Stack, i with a value of stack.count, and reduces by 1 every iteration.
             // Once the stack reaches 0, the loop wont start.
@@ -47,6 +48,7 @@
                 Console.WriteLine($"Items left in the stack: {employeeStack.Count}");
                 Console.WriteLine("--------------------------\n");
             }
+
 
             // Push the objects back into the stack
             employeeStack.Push(Mika);
@@ -71,7 +73,7 @@
             // Sam is the object num 3 in the stack. If Sam is still in the stack, Contains will return true and the writeline will print.
             if(employeeStack.Contains(Sam))
             {
-                Console.WriteLine("Employee 3 is in stack");
+                Console.WriteLine($"Employee 3 named {Sam.Name} is in stack");
             }
 
 
