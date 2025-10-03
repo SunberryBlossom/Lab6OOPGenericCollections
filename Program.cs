@@ -30,7 +30,7 @@
             {
                 Console.WriteLine($"Name: {employee.Name}\nWork ID: {employee.Id}\nCurrent Salary: {employee.Salary:C0}\nGender: {employee.Gender}");
                 Console.WriteLine($"Items left in the stack: {employeeStack.Count}");
-                Console.WriteLine("--------------------------");
+                Console.WriteLine("--------------------------\n");
             }
 
             // Print out all employees through the Pop method
@@ -43,7 +43,7 @@
 
                 Console.WriteLine($"Name: {currentEmployee.Name}\nWork ID: {currentEmployee.Id}\nCurrent Salary: {currentEmployee.Salary:C0}\nGender: {currentEmployee.Gender}");
                 Console.WriteLine($"Items left in the stack: {employeeStack.Count}");
-                Console.WriteLine("--------------------------");
+                Console.WriteLine("--------------------------\n");
             }
 
             // Push the objects back into the stack
