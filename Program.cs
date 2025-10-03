@@ -38,7 +38,7 @@
             // Since we are removing items from the Stack, i with a value of stack.count, and reduces by 1 every iteration.
             // Once the stack reaches 0, the loop wont start.
             Console.WriteLine("Retrieving all employees using Pop method. . .");
-            for(int i = employeeStack.Count; i > 0; i--)
+            for (int i = employeeStack.Count; i > 0; i--)
             {
                 Employee currentEmployee = employeeStack.Pop();
                 PrintEmployee(currentEmployee, employeeStack.Count);
@@ -64,7 +64,7 @@
 
 
             // Sam is the object num 3 in the stack. If Sam is still in the stack, Contains will return true and the writeline will print.
-            if(employeeStack.Contains(Sam))
+            if (employeeStack.Contains(Sam))
             {
                 Console.WriteLine($"Employee 3 named {Sam.Name} is in stack");
             }
