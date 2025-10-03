@@ -30,9 +30,7 @@
             Console.WriteLine("Retrieving all employees with console writelines and foreach loop. . .");
             foreach (var employee in employeeStack)
             {
-                Console.WriteLine($"Name: {employee.Name}\nWork ID: {employee.Id}\nCurrent Salary: {employee.Salary:C0}\nGender: {employee.Gender}");
-                Console.WriteLine($"Items left in the stack: {employeeStack.Count}");
-                Console.WriteLine("--------------------------\n");
+                PrintEmployee(employee, employeeStack.Count);
             }
 
 
@@ -43,10 +41,7 @@
             for(int i = employeeStack.Count; i > 0; i--)
             {
                 Employee currentEmployee = employeeStack.Pop();
-
-                Console.WriteLine($"Name: {currentEmployee.Name}\nWork ID: {currentEmployee.Id}\nCurrent Salary: {currentEmployee.Salary:C0}\nGender: {currentEmployee.Gender}");
-                Console.WriteLine($"Items left in the stack: {employeeStack.Count}");
-                Console.WriteLine("--------------------------\n");
+                PrintEmployee(currentEmployee, employeeStack.Count);
             }
 
 
@@ -64,9 +59,7 @@
             for (int i = 0; i < 2; i++)
             {
                 Employee emp = employeeStack.Peek();
-                Console.WriteLine($"Name: {emp.Name}\nWork ID: {emp.Id}\nCurrent Salary: {emp.Salary:C0}\nGender: {emp.Gender}");
-                Console.WriteLine($"Items left in the stack: {employeeStack.Count}");
-                Console.WriteLine("--------------------------\n");
+                PrintEmployee(emp, employeeStack.Count);
             }
 
 
@@ -106,22 +99,31 @@
             // Finds first member of list that matches female gender, then prints that object's property values.
             Console.WriteLine("First female in employee list: ");
             Employee firstFemale = employeeList.Find(x => x.Gender == Gender.Female);
-            Console.WriteLine($"Name: {firstFemale.Name}\nWork ID: {firstFemale.Id}\nCurrent Salary: {firstFemale.Salary:C0}\nGender: {firstFemale.Gender}");
-            Console.WriteLine("--------------------------\n");
+            PrintEmployee(firstFemale);
 
-            
+
             // Makes new list with only female employees. Loop through that list and print out their property values
             Console.WriteLine("All females in employee list: ");
             List<Employee> listOfFemales = employeeList.FindAll(x => x.Gender == Gender.Female);
             foreach (var female in listOfFemales)
             {
-                Console.WriteLine($"Name: {female.Name}\nWork ID: {female.Id}\nCurrent Salary: {female.Salary:C0}\nGender: {female.Gender}");
-                Console.WriteLine("--------------------------\n");
+                PrintEmployee(female);
             }
-            
+        }
 
+        // Method to print employee and how many are left in the stack.
+        static void PrintEmployee(Employee employee, int itemsLeft)
+        {
+            Console.WriteLine($"Name: {employee.Name}\nWork ID: {employee.Id}\nCurrent Salary: {employee.Salary:C0}\nGender: {employee.Gender}");
+            Console.WriteLine($"Items left in the stack: {itemsLeft}");
+            Console.WriteLine("--------------------------\n");
+        }
 
-
+        // Method overload if one do not wanna print out how many items are left.
+        static void PrintEmployee(Employee employee)
+        {
+            Console.WriteLine($"Name: {employee.Name}\nWork ID: {employee.Id}\nCurrent Salary: {employee.Salary:C0}\nGender: {employee.Gender}");
+            Console.WriteLine("--------------------------\n");
         }
     }
 }
