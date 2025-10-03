@@ -9,11 +9,11 @@
 
 
             // Creating five employees
-            Employee Mika = new Employee("E001", "Mika", Gender.Female, 25600);
-            Employee Elvira = new Employee("E002", "Elvira", Gender.Female, 38400);
-            Employee Sam = new Employee("E003", "Sam", Gender.Other, 16700);
-            Employee Andreas = new Employee("E004", "Andreas", Gender.Male, 30000);
-            Employee Hera = new Employee("E005", "Hera", Gender.Female, 6050);
+            Employee Mika = new Employee("E001", "Mika Mikasdotter", Gender.Female, 25600);
+            Employee Elvira = new Employee("E002", "Elvira Mariesdotter", Gender.Female, 38400);
+            Employee Sam = new Employee("E003", "Sam Samssen", Gender.Other, 16700);
+            Employee Andreas = new Employee("E004", "Andreas Andreasson", Gender.Male, 30000);
+            Employee Hera = new Employee("E005", "Hera Hund", Gender.Female, 6050);
 
 
             // Pushing in five new employees with filled in property values
@@ -52,6 +52,17 @@
             employeeStack.Push(Sam);
             employeeStack.Push(Andreas);
             employeeStack.Push(Hera);
+
+
+            // Print out employees of the stack using the Peek method.
+            // Since we now that we want to only print two members of the list, we can set i to stop after two iterations.
+            Console.WriteLine("Retrieving employees using Peek method. . .");
+            for (int i = 0; i < 2; i++)
+            {
+                //Console.WriteLine(employeeStack.Peek());
+                Console.WriteLine($"Items left in the stack: {employeeStack.Count}");
+                Console.WriteLine("--------------------------\n");
+            }
         }
     }
 }
