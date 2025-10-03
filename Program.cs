@@ -4,6 +4,8 @@
     {
         static void Main(string[] args)
         {
+            //---------------------------------------------------------------------PART-ONE-----------------------------------------------------//
+
             // Creating a Stack to contain Employee objects
             Stack<Employee> employeeStack = new Stack<Employee>();
 
@@ -71,6 +73,53 @@
             {
                 Console.WriteLine("Employee 3 is in stack");
             }
+
+
+            //------------------------------------------------------------PART-TWO------------------------------------------------------------//
+
+            // Creating a List to contain Employee objects
+            List<Employee> employeeList = new List<Employee>();
+
+
+            // Pushing in five new employees with filled in property values
+            employeeList.Add(Mika);
+            employeeList.Add(Elvira);
+            employeeList.Add(Sam);
+            employeeList.Add(Andreas);
+            employeeList.Add(Hera);
+
+            // If else statement checking if the list contains the object Elvira
+            if (employeeList.Contains(Elvira))
+            {
+                Console.WriteLine($"The employee named {Elvira.Name} exists in the list");
+                Console.WriteLine("--------------------------\n");
+            }
+            else
+            {
+                Console.WriteLine($"The employee named {Elvira.Name} does NOT exist in the list");
+                Console.WriteLine("--------------------------\n");
+            }
+
+
+            // Finds first member of list that matches female gender, then prints that object's property values.
+            Console.WriteLine("First female in employee list: ");
+            Employee firstFemale = employeeList.Find(x => x.Gender == Gender.Female);
+            Console.WriteLine($"Name: {firstFemale.Name}\nWork ID: {firstFemale.Id}\nCurrent Salary: {firstFemale.Salary:C0}\nGender: {firstFemale.Gender}");
+            Console.WriteLine("--------------------------\n");
+
+            
+            // Makes new list with only female employees. Loop through that list and print out their property values
+            Console.WriteLine("All females in employee list: ");
+            List<Employee> listOfFemales = employeeList.FindAll(x => x.Gender == Gender.Female);
+            foreach (var female in listOfFemales)
+            {
+                Console.WriteLine($"Name: {female.Name}\nWork ID: {female.Id}\nCurrent Salary: {female.Salary:C0}\nGender: {female.Gender}");
+                Console.WriteLine("--------------------------\n");
+            }
+            
+
+
+
         }
     }
 }
