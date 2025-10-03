@@ -59,9 +59,17 @@
             Console.WriteLine("Retrieving employees using Peek method. . .");
             for (int i = 0; i < 2; i++)
             {
-                //Console.WriteLine(employeeStack.Peek());
+                Employee emp = employeeStack.Peek();
+                Console.WriteLine($"Name: {emp.Name}\nWork ID: {emp.Id}\nCurrent Salary: {emp.Salary:C0}\nGender: {emp.Gender}");
                 Console.WriteLine($"Items left in the stack: {employeeStack.Count}");
                 Console.WriteLine("--------------------------\n");
+            }
+
+
+            // Sam is the object num 3 in the stack. If Sam is still in the stack, Contains will return true and the writeline will print.
+            if(employeeStack.Contains(Sam))
+            {
+                Console.WriteLine("Employee 3 is in stack");
             }
         }
     }
